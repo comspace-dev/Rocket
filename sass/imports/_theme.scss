@@ -1,0 +1,32 @@
+body {
+	color: $body-color;
+}
+
+a {
+	color: $link-color;
+}
+
+th, td {
+	border-color: darken(white, 14%);
+}
+
+th {
+	background-color: darken(white, 6%);
+}
+
+.nav {
+	a {
+		color: black;
+		background-color: darken(white, 6%);
+		&:hover {
+			background-color: darken(white, 10%);
+		}
+		&.active {
+			background-color: darken(white, 14%);
+		}
+	}
+}
+
+.island {
+	background-color: darken(white, 6%);
+}

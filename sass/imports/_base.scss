@@ -1,0 +1,64 @@
+html {
+	overflow-y: scroll;
+	font-size: 62.5%;
+}
+
+body {
+	margin: 0;
+	font-family: $base-font-family;
+	@include font-size;
+}
+
+a {
+	text-decoration: none;
+	&:focus {
+		outline: thin dotted;
+	}
+}
+
+img {
+	border: 0;
+	max-width: 100%;
+	display: block;
+}
+
+h1, .alpha {
+	@include font-size(35, 2);
+}
+
+h2, .beta {
+	@include font-size(28, 2);
+}
+
+h3, .gamma {
+	@include font-size(21);
+}
+
+h4, .delta {
+	@include font-size(18);
+}
+
+h1, h2, h3, h4, p, ul, ol, table {
+	margin: 0;
+	@include leading;
+}
+
+ul, ol {
+	@include leading($base-spacing-px, padding, left);
+	nav & {
+		list-style: none;
+		padding-left: 0;
+	}
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td {
+	@include border;
+	@include shorthand(padding, $base-spacing-px / 2);
+	text-align: left;
+	vertical-align: top;
+}
