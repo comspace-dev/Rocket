@@ -7,26 +7,26 @@ a {
 }
 
 th, td {
-	border-color: darken(white, 14%);
+	border-color: lighten($secondary-color, 5%);
 }
 
 th {
-	background-color: darken(white, 6%);
+	background-color: lighten($secondary-color, 10%);
 }
 
 .nav {
 	a {
 		color: black;
-		background-color: darken(white, 6%);
+		background-color: lighten($secondary-color, 10%);
 		&:hover {
-			background-color: darken(white, 10%);
+			background-color: lighten($secondary-color, 5%);
 		}
 		&.active {
-			background-color: darken(white, 14%);
+			background-color: $secondary-color;
 		}
 	}
 }
 
 .island {
-	background-color: darken(white, 6%);
+	border-color: $secondary-color;
 }

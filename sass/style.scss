@@ -15,7 +15,8 @@ $breakpoint-large: 63.125;
 }
 
 $body-color: #222;
-$link-color: lighten(darkred, 7%);
+$link-color: lighten(darkred, 10%);
+$secondary-color: lightgrey;
 
 @import "imports/pilot";
 

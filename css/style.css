@@ -161,10 +161,11 @@ th, td {
 .island, .islet {
   margin-top: 21px;
   margin-top: 2.1rem;
+  border-left-width: 5.25px;
+  border-left-width: 0.525rem;
+  border-left-style: solid;
   padding: 21px;
-  padding: 2.1rem;
-  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.5);
-  box-shadow: 0.2rem 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.5); }
+  padding: 2.1rem; }
   .island :first-child, .islet :first-child {
     margin-top: 0; }
 
@@ -220,21 +221,21 @@ body {
   color: #222222; }
 
 a {
-  color: #af0000; }
+  color: #be0000; }
 
 th, td {
-  border-color: #dbdbdb; }
+  border-color: #e0e0e0; }
 
 th {
-  background-color: #f0f0f0; }
+  background-color: #ececec; }
 
 .nav a, .tab-nav a, .flyout a, .stacked-nav a {
   color: black;
-  background-color: #f0f0f0; }
+  background-color: #ececec; }
   .nav a:hover, .tab-nav a:hover, .flyout a:hover, .stacked-nav a:hover {
-    background-color: #e6e6e6; }
+    background-color: #e0e0e0; }
   .nav a.active, .tab-nav a.active, .flyout a.active, .stacked-nav a.active {
-    background-color: #dbdbdb; }
+    background-color: lightgrey; }
 
 .island, .islet {
-  background-color: #f0f0f0; }
+  border-color: lightgrey; }

@@ -115,8 +115,8 @@
 
 .island {
 	@include leading;
+	@include border($base-spacing-px / 4, solid, left);
 	@include shorthand(padding, $base-spacing-px);
-	@include box-shadow;
 	:first-child {
 		margin-top: 0;
 	}
