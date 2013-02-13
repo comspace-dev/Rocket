@@ -18,8 +18,7 @@ $body-color: #222;
 $link-color: lighten(darkred, 10%);
 $secondary-color: lightgrey;
 
-@import "pilot/pilot";
-
+@import "imports/pilot";
 @import "imports/base";
 @import "imports/layout";
 @import "imports/module";
