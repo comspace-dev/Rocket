@@ -2,6 +2,14 @@ $base-font-size-px: 14;
 $base-spacing-px: 21;
 $base-font-family: sans-serif;
 
+$page-width-px: 940px;
+
+$box-item-margin-px: 40px;
+$box-item-margin: percentage($box-item-margin-px / $page-width-px);
+$box-width-2col: (100 - $box-item-margin) / 2;
+$box-width-3col: (100 - $box-item-margin * 2) / 3;
+$box-width-4col: (100 - $box-item-margin * 3) / 4;
+
 $breakpoint-medium: 28.125;
 $breakpoint-large: 63.125;
 

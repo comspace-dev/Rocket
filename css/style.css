@@ -68,9 +68,31 @@ th, td {
 
 .page-width {
   margin: 0 auto;
-  padding: 0 2.5%;
-  max-width: 1000px;
+  max-width: 940px;
   overflow: hidden; }
+
+.box-2col, .box-3col, .box-4col {
+  margin-top: 21px;
+  margin-top: 2.1rem;
+  overflow: hidden; }
+
+.box-2col .box, .box-3col .box, .box-4col .box {
+  float: left; }
+
+.box-2col .box {
+  width: 47.87234%; }
+  .box-2col .box + .box {
+    margin-left: 4.25532%; }
+
+.box-3col .box {
+  width: 30.49645%; }
+  .box-3col .box + .box {
+    margin-left: 4.25532%; }
+
+.box-4col .box {
+  width: 21.80851%; }
+  .box-4col .box + .box {
+    margin-left: 4.25532%; }
 
 @media only screen and (min-width: 63.125em) {
   .primary {

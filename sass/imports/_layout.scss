@@ -1,8 +1,51 @@
 .page-width {
 	margin: 0 auto;
-	padding: 0 2.5%;
-	max-width: 1000px;
+	max-width: $page-width-px;
 	overflow: hidden;
+}
+
+// Teaser boxes
+
+%box-container {
+	@include leading;
+	overflow: hidden;
+}
+
+%box-container__item {
+	float: left;
+}
+
+.box-2col {
+	@extend %box-container;
+	.box {
+		@extend %box-container__item;
+		width: $box-width-2col;
+		& + .box {
+			margin-left: $box-item-margin;
+		}
+	}
+}
+
+.box-3col {
+	@extend %box-container;
+	.box {
+		@extend %box-container__item;
+		width: $box-width-3col;
+		& + .box {
+			margin-left: $box-item-margin;
+		}
+	}
+}
+
+.box-4col {
+	@extend %box-container;
+	.box {
+		@extend %box-container__item;
+		width: $box-width-4col;
+		& + .box {
+			margin-left: $box-item-margin;
+		}
+	}
 }
 
 .primary {
