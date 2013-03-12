@@ -1,66 +1,17 @@
+// Page width, defines the maximum width of the page
+
 .page-width {
 	margin: 0 auto;
-	max-width: $page-width-px;
-	overflow: hidden;
-}
-
-// Teaser boxes
-
-%box-container {
-	@include leading;
-	overflow: hidden;
-}
-
-%box-container__item {
-	float: left;
-}
-
-.box-2col {
-	@extend %box-container;
-	.box {
-		@extend %box-container__item;
-		width: $box-width-2col;
-		& + .box {
-			margin-left: $box-item-margin;
-		}
+	width: $breakpoint-medium-px + px;
+	@include breakpoint(medium) {
+		width: $breakpoint-large-px + px;
 	}
-}
-
-.box-3col {
-	@extend %box-container;
-	.box {
-		@extend %box-container__item;
-		width: $box-width-3col;
-		& + .box {
-			margin-left: $box-item-margin;
-		}
-	}
-}
-
-.box-4col {
-	@extend %box-container;
-	.box {
-		@extend %box-container__item;
-		width: $box-width-4col;
-		& + .box {
-			margin-left: $box-item-margin;
-		}
-	}
-}
-
-.primary {
 	@include breakpoint(large) {
-		width: 75%;
-		float: right;
+		width: $breakpoint-mega-px + px;
 	}
 }
 
-.secondary {
-	@include breakpoint(large) {
-		width: 20%;
-		float: left;
-	}
-}
+// Clearfix, @extend if needed
 
 %clearfix {
 	&:before, &:after {

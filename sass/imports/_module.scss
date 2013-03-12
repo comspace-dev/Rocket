@@ -7,25 +7,26 @@
 // 	</ul>
 // </nav>
 
+// Vertical navigation
+
+.stacked-nav {
+	li {
+		float: none;
+	}
+	a {
+		display: block;
+	}
+}
+
 // Horizontal navigation
 
 .nav {
+	@extend .stacked-nav;
 	@include breakpoint(large) {
 		overflow: hidden;
 		li {
 			float: left;
 		}
-	}
-	li + li {
-		@include leading(1);
-		@include breakpoint(large) {
-			margin-top: 0;
-			@include leading(1, margin, left);
-		}
-	}
-	a {
-		@include shorthand(padding, $base-spacing-px / 2, $base-spacing-px);
-		display: block;
 	}
 }
 
@@ -33,8 +34,6 @@
 
 .tab-nav {
 	@extend .nav;
-	padding-left: 0;
-	list-style: none;
 	display: none;
 	@include breakpoint(large) {
 		display: block;
@@ -57,9 +56,7 @@
 	}
 	// Second level + children
 	ul {
-		@include leading(1);
 		@include breakpoint(large) {
-			margin-top: 0;
 			position: absolute;
 			left: 0;
 			white-space: nowrap;
@@ -70,23 +67,7 @@
 			}
 			li {
 				float: none;
-				& + li {
-					margin: 0;
-				}
 			}
-		}
-	}
-}
-
-// Vertical navigation
-
-.stacked-nav {
-	@extend .nav;
-	li {
-		float: none;
-		& + li {
-			@include leading(1);
-			margin-left: 0;
 		}
 	}
 }
@@ -97,60 +78,36 @@
 	overflow: hidden;
 	li {
 		float: left;
-		& + li {
-			@include leading($base-spacing-px / 2, margin, left);
-			&:before {
-				@include leading($base-spacing-px / 2, margin, right);
-				content: "»";
-			}
-		}
 	}
-}
-
-// Island + islet
-
-// <div class="island">
-// 	...
-// </div>
-
-.island {
-	@include leading;
-	@include border($base-spacing-px / 4, solid, left);
-	@include shorthand(padding, $base-spacing-px);
-	:first-child {
-		margin-top: 0;
-	}
-}
-
-.islet {
-	@extend .island;
-	@include shorthand(padding, $base-spacing-px / 2);
 }
 
 // Media object
 
 // <div class="media">
-// 	<img src="" alt="" class="image">
-// 	<div class="body">
+// 	<img src="" alt="" class="media__image">
+// 	<div class="media__body">
 // 		...
 // 	</div>
 // </div>
 
 .media {
-	@include leading;
-	@include breakpoint(large) {
-		overflow: hidden;
-		.image {
-			@include leading($base-spacing-px, margin, right);
-			float: left;
-		}
-		.body {
-			overflow: hidden;
-			:first-child {
-				margin-top: 0;
-			}
-		}
-	}
+	overflow: hidden;
+}
+
+.media__image {
+	float: left;
+}
+
+.media__image--alternate {
+	float: right;
+}
+
+.media__body {
+	overflow: hidden;
+}
+
+.media__body--alternate {
+	overflow: visible;
 }
 
 // Tab box

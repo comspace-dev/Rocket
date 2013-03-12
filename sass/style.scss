@@ -1,17 +1,23 @@
+// Fonts, set the base font size, line-height and font-family
+
 $base-font-size-px: 14;
 $base-spacing-px: 21;
 $base-font-family: sans-serif;
 
-$page-width-px: 940px;
+// Breakpoints, define as much as you need and as little as possible
 
-$box-item-margin-px: 40px;
-$box-item-margin: percentage($box-item-margin-px / $page-width-px);
-$box-width-2col: (100 - $box-item-margin) / 2;
-$box-width-3col: (100 - $box-item-margin * 2) / 3;
-$box-width-4col: (100 - $box-item-margin * 3) / 4;
+@function calculate-breakpoint($px, $base: 16) {
+	@return $px / $base;
+}
 
-$breakpoint-medium: 28.125;
-$breakpoint-large: 63.125;
+$breakpoint-medium-px: 280;
+$breakpoint-medium: calculate-breakpoint($breakpoint-medium-px);
+
+$breakpoint-large-px: 580;
+$breakpoint-large: calculate-breakpoint($breakpoint-large-px);
+
+$breakpoint-mega-px: 980;
+$breakpoint-mega: calculate-breakpoint($breakpoint-mega-px);
 
 @mixin breakpoint($width) {
 	@if $width == medium {
@@ -22,11 +28,17 @@ $breakpoint-large: 63.125;
 	}
 }
 
+// Constants
+
 $body-color: #222;
-$link-color: lighten(darkred, 10%);
-$secondary-color: lightgrey;
+$body-bg: white;
+$link-color: blue;
+
+// Imports
 
 @import "imports/pilot";
+@import "imports/grid";
+
 @import "imports/base";
 @import "imports/layout";
 @import "imports/module";

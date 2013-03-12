@@ -1,32 +1,8 @@
 body {
 	color: $body-color;
+	background-color: $body-bg;
 }
 
 a {
 	color: $link-color;
-}
-
-th, td {
-	border-color: lighten($secondary-color, 5%);
-}
-
-th {
-	background-color: lighten($secondary-color, 10%);
-}
-
-.nav {
-	a {
-		color: black;
-		background-color: lighten($secondary-color, 10%);
-		&:hover {
-			background-color: lighten($secondary-color, 5%);
-		}
-		&.active {
-			background-color: $secondary-color;
-		}
-	}
-}
-
-.island {
-	border-color: $secondary-color;
 }
