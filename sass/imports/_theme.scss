@@ -6,3 +6,11 @@ body {
 a {
 	color: $link-color;
 }
+
+.content div {
+	background-color: red;
+}
+
+.sub-content div {
+	background-color: blue;
+}

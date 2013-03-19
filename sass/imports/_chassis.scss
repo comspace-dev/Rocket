@@ -1,6 +1,6 @@
-$gutter-width-px: 20px;
+$gutter-width-px: 20 !default;
 
-@mixin device-type($value) {
+@mixin device-type($value: "") {
 	%#{$value}one-whole {
 		width: 100%;
 	}
@@ -122,16 +122,22 @@ $gutter-width-px: 20px;
 	}
 }
 
-@include breakpoint(medium) {
-	@include device-type(medium-);
+@include device-type;
+
+@include breakpoint(baby-bear) {
+	@include device-type(baby-bear-);
 }
 
-@include breakpoint(large) {
-	@include device-type(large-);
+@include breakpoint(mama-bear) {
+	@include device-type(mama-bear-);
+}
+
+@include breakpoint(papa-bear) {
+	@include device-type(papa-bear-);
 }
 
 %grid {
-	margin-left: -$gutter-width-px;
+	margin-left: -$gutter-width-px + px;
 	overflow: hidden;
 }
 
@@ -139,6 +145,6 @@ $gutter-width-px: 20px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	padding-left: $gutter-width-px;
+	padding-left: $gutter-width-px + px;
 	float: left;
 }

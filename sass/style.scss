@@ -1,8 +1,12 @@
 // Fonts, set the base font size, line-height and font-family
 
-$base-font-size-px: 14;
-$base-spacing-px: 21;
+$base-font-size-px: 20;
+$base-spacing-px: 30;
 $base-font-family: sans-serif;
+
+// Grid
+
+$gutter-width-px: 20;
 
 // Breakpoints, define as much as you need and as little as possible
 
@@ -10,21 +14,28 @@ $base-font-family: sans-serif;
 	@return $px / $base;
 }
 
-$breakpoint-medium-px: 280;
-$breakpoint-medium: calculate-breakpoint($breakpoint-medium-px);
+// * baby-bear (phone landscape)
+// * mama-bear (tablet portrait)
+// * papa-bear (tablet landscape and above)
 
-$breakpoint-large-px: 580;
-$breakpoint-large: calculate-breakpoint($breakpoint-large-px);
+$breakpoint-baby-bear-px: 300;
+$breakpoint-baby-bear: calculate-breakpoint($breakpoint-baby-bear-px);
 
-$breakpoint-mega-px: 980;
-$breakpoint-mega: calculate-breakpoint($breakpoint-mega-px);
+$breakpoint-mama-bear-px: 600;
+$breakpoint-mama-bear: calculate-breakpoint($breakpoint-mama-bear-px);
+
+$breakpoint-papa-bear-px: 940;
+$breakpoint-papa-bear: calculate-breakpoint($breakpoint-papa-bear-px);
 
 @mixin breakpoint($width) {
-	@if $width == medium {
-		@media only screen and (min-width: $breakpoint-medium + em) { @content; }
+	@if $width == baby-bear {
+		@media only screen and (min-width: $breakpoint-baby-bear + em) { @content; }
 	}
-	@else if $width == large {
-		@media only screen and (min-width: $breakpoint-large + em) { @content; }
+	@else if $width == mama-bear {
+		@media only screen and (min-width: $breakpoint-mama-bear + em) { @content; }
+	}
+	@else if $width == papa-bear {
+		@media only screen and (min-width: $breakpoint-papa-bear + em) { @content; }
 	}
 }
 
@@ -37,7 +48,7 @@ $link-color: blue;
 // Imports
 
 @import "imports/pilot";
-@import "imports/grid";
+@import "imports/chassis";
 
 @import "imports/base";
 @import "imports/layout";

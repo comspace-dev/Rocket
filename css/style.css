@@ -5,7 +5,10 @@ html {
   overflow-y: scroll; }
 
 body {
-  margin: 0; }
+  margin: 0;
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 1.5; }
 
 a:focus {
   outline: thin dotted; }
@@ -25,13 +28,13 @@ table {
 
 .page-width {
   margin: 0 auto;
-  width: 280px; }
-  @media only screen and (min-width: 17.5em) {
+  padding: 0 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  @media only screen and (min-width: 58.75em) {
     .page-width {
-      width: 580px; } }
-  @media only screen and (min-width: 36.25em) {
-    .page-width {
-      width: 980px; } }
+      max-width: 940px; } }
 
 .flyout {
   *zoom: 1; }
@@ -46,36 +49,8 @@ table {
 .stacked-nav a, .nav a, .tab-nav a, .flyout a {
   display: block; }
 
-@media only screen and (min-width: 36.25em) {
-  .nav, .tab-nav, .flyout {
-    overflow: hidden; }
-    .nav li, .tab-nav li, .flyout li {
-      float: left; } }
-
 .tab-nav {
   display: none; }
-  @media only screen and (min-width: 36.25em) {
-    .tab-nav {
-      display: block; } }
-
-@media only screen and (min-width: 36.25em) {
-  .flyout {
-    overflow: visible; }
-    .flyout li {
-      position: relative; }
-      .flyout li:hover > ul {
-        display: block; } }
-@media only screen and (min-width: 36.25em) {
-  .flyout ul {
-    position: absolute;
-    left: 0;
-    white-space: nowrap;
-    display: none; }
-    .flyout ul ul {
-      left: 100%;
-      top: 0; }
-    .flyout ul li {
-      float: none; } }
 
 .breadcrumb {
   overflow: hidden; }
@@ -96,14 +71,6 @@ table {
 
 .media__body--alternate {
   overflow: visible; }
-
-@media only screen and (min-width: 36.25em) {
-  .tab-box {
-    display: none; }
-    .tab-box:target {
-      display: block; }
-    .tab-box .tab-heading {
-      display: none; } }
 
 .t20 {
   width: 20%; }
@@ -132,3 +99,9 @@ body {
 
 a {
   color: blue; }
+
+.content div {
+  background-color: red; }
+
+.sub-content div {
+  background-color: blue; }

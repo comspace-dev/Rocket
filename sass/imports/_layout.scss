@@ -2,12 +2,12 @@
 
 .page-width {
 	margin: 0 auto;
-	width: $breakpoint-medium-px + px;
-	@include breakpoint(medium) {
-		width: $breakpoint-large-px + px;
-	}
-	@include breakpoint(large) {
-		width: $breakpoint-mega-px + px;
+	padding: 0 20px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	@include breakpoint(papa-bear) {
+		max-width: $breakpoint-papa-bear-px + px;
 	}
 }
 
