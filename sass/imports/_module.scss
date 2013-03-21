@@ -22,7 +22,7 @@
 
 .nav {
 	@extend .stacked-nav;
-	@include breakpoint(large) {
+	@include breakpoint(papa-bear) {
 		overflow: hidden;
 		li {
 			float: left;
@@ -35,7 +35,7 @@
 .tab-nav {
 	@extend .nav;
 	display: none;
-	@include breakpoint(large) {
+	@include breakpoint(papa-bear) {
 		display: block;
 	}
 }
@@ -45,7 +45,7 @@
 .flyout {
 	@extend .nav;
 	@extend %clearfix;
-	@include breakpoint(large) {
+	@include breakpoint(papa-bear) {
 		overflow: visible;
 		li {
 			position: relative;
@@ -56,7 +56,7 @@
 	}
 	// Second level + children
 	ul {
-		@include breakpoint(large) {
+		@include breakpoint(papa-bear) {
 			position: absolute;
 			left: 0;
 			white-space: nowrap;
@@ -118,7 +118,7 @@
 // </div>
 
 .tab-box {
-	@include breakpoint(large) {
+	@include breakpoint(papa-bear) {
 		display: none;
 		&:target {
 			display: block;
