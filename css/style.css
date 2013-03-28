@@ -37,9 +37,7 @@ table {
   .flyout:after {
     clear: both; }
 
-.stacked-nav li, .nav li, .tab-nav li, .flyout li {
-  float: none; }
-.stacked-nav a, .nav a, .tab-nav a, .flyout a {
+.stacked-nav a, .nav a, .tab-nav a, .flyout a, .breadcrumb a {
   display: block; }
 
 @media only screen and (min-width: 58.75em) {
@@ -118,6 +116,9 @@ table {
 
 .t60 {
   width: 60%; }
+
+.t75 {
+  width: 75%; }
 
 .t80 {
   width: 80%; }

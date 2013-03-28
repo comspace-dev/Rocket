@@ -10,9 +10,6 @@
 // Vertical navigation
 
 .stacked-nav {
-	li {
-		float: none;
-	}
 	a {
 		display: block;
 	}
@@ -75,6 +72,7 @@
 // Breadcrumb navigation
 
 .breadcrumb {
+	@extend .stacked-nav;
 	overflow: hidden;
 	li {
 		float: left;
@@ -160,6 +158,10 @@
 
 .t60 {
 	width: 60%;
+}
+
+.t75 {
+	width: 75%;
 }
 
 .t80 {
