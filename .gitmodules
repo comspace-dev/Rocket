@@ -1,0 +1,3 @@
+[submodule "sass/imports/Pilot"]
+	path = sass/imports/Pilot
+	url = git://github.com/heartbeeed/Pilot.git
