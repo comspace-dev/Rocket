@@ -1,6 +1,6 @@
 [submodule "sass/imports/Pilot"]
 	path = sass/imports/Pilot
-	url = git://github.com/heartbeeed/Pilot.git
+	url = https://github.com/heartbeeed/Pilot.git
 [submodule "sass/imports/Chassis"]
 	path = sass/imports/Chassis
-	url = git://github.com/heartbeeed/Chassis.git
+	url = https://github.com/heartbeeed/Chassis.git
