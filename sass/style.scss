@@ -1,7 +1,7 @@
 // Fonts, set the base font size, line-height and font-family
 
-$base-font-size-px: 20;
-$base-spacing-px: 30;
+$base-font-size-px: 16;
+$base-spacing-px: 24;
 $base-font-family: sans-serif;
 
 // Grid
@@ -43,6 +43,7 @@ $breakpoint-papa-bear: calculate-breakpoint($breakpoint-papa-bear-px);
 
 $body-color: #222;
 $body-bg: white;
+
 $link-color: blue;
 
 // Imports
@@ -54,4 +55,3 @@ $link-color: blue;
 @import "imports/layout";
 @import "imports/module";
 @import "imports/state";
-@import "imports/theme";
