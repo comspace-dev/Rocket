@@ -1,4 +1,4 @@
-// Media object
+// media object, @extend if needed
 
 // <div class="media">
 // 	<img src="" alt="" class="media__image">
@@ -7,22 +7,22 @@
 // 	</div>
 // </div>
 
-.media {
+%media {
 	overflow: hidden;
 }
 
-.media__image {
+%media__image {
 	float: left;
 }
 
-.media__image--alternate {
+%media__image--alternate {
 	float: right;
 }
 
-.media__body {
+%media__body {
 	overflow: hidden;
 }
 
-.media__body--alternate {
+%media__body--alternate {
 	overflow: visible;
 }
