@@ -1,14 +1,14 @@
-// Fonts, set the base font size, line-height and font-family
+// fonts, set the base font size, line-height and font-family
 
 $base-font-size-px: 16;
 $base-spacing-px: 24;
 $base-font-family: sans-serif;
 
-// Grid
+// grid
 
 $gutter-width-px: 20;
 
-// Breakpoints, define as much as you need and as little as possible
+// breakpoints, define as much as you need and as little as possible
 
 @function calculate-breakpoint($px, $base: 16) {
 	@return $px / $base;
@@ -39,14 +39,7 @@ $breakpoint-papa-bear: calculate-breakpoint($breakpoint-papa-bear-px);
 	}
 }
 
-// Constants
-
-$body-color: #222;
-$body-bg: white;
-
-$link-color: blue;
-
-// Imports
+// imports
 
 // @import "imports/Pilot/pilot";
 // @import "imports/Chassis/chassis";
