@@ -1,10 +1,7 @@
-// Page width, defines the maximum width of the page
+// page width, defines the maximum width of the page
 
 .page-width {
 	margin: 0 auto;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
 
 	@include breakpoint(baby-bear) {
 		max-width: $breakpoint-baby-bear-px + px;
@@ -19,7 +16,7 @@
 	}
 }
 
-// Clearfix, @extend if needed
+// clearfix, @extend if needed
 
 %clearfix {
 	*zoom: 1;
