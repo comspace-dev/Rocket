@@ -41,10 +41,31 @@ $breakpoint-papa-bear: calculate-breakpoint($breakpoint-papa-bear-px);
 
 // imports
 
-// @import "imports/Pilot/pilot";
-// @import "imports/Chassis/chassis";
+@import "imports/Pilot/pilot";
+@import "imports/Chassis/chassis";
 
 @import "imports/base";
 @import "imports/layout";
 @import "imports/module";
 @import "imports/state";
+
+// clearfix, @extend if needed
+
+$has-clearfix: false !default;
+
+@if not $has-clearfix {
+	%clearfix {
+		*zoom: 1;
+
+		&:before,
+		&:after {
+			content: "";
+			display: table;
+		}
+
+		&:after {
+			clear: both;
+		}
+	}
+	$has-clearfix: true;
+}

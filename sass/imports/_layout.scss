@@ -15,19 +15,3 @@
 		max-width: $breakpoint-papa-bear-px + px;
 	}
 }
-
-// clearfix, @extend if needed
-
-%clearfix {
-	*zoom: 1;
-
-	&:before,
-	&:after {
-		content: "";
-		display: table;
-	}
-
-	&:after {
-		clear: both;
-	}
-}
