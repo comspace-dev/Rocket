@@ -1,0 +1,6 @@
+[submodule "src/css/imports/Chassis"]
+	path = src/css/imports/Chassis
+	url = https://github.com/heartbeeed/Chassis.git
+[submodule "src/css/imports/Pilot"]
+	path = src/css/imports/Pilot
+	url = https://github.com/heartbeeed/Pilot.git
