@@ -7,10 +7,10 @@
 // 	</div>
 // </div>
 
-%media,
-%media__body {
+%media {
+	@extend %clearfix;
+
 	display: block;
-	overflow: hidden;
 }
 
 %media__image {
@@ -19,6 +19,10 @@
 
 %media__image--alternate {
 	float: right;
+}
+
+%media__body {
+	overflow: hidden;
 }
 
 %media__body--alternate {
