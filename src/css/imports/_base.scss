@@ -4,6 +4,12 @@ html {
 
 body {
 	margin: 0;
+	font-family: $base-font-family;
+
+	@include font-size;
+
+	color: #222;
+	background-color: white;
 }
 
 * {
@@ -13,6 +19,7 @@ body {
 }
 
 a {
+	text-decoration: none;
 
 	&:focus {
 		outline: thin dotted;
@@ -50,7 +57,9 @@ h6, .zeta {
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, ol, table {
+	margin: 0;
 
+	@include leading;
 }
 
 ul, ol {
