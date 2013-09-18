@@ -6,7 +6,7 @@ body {
 	margin: 0;
 	font-family: $base-font-family;
 
-	@include font-size;
+	@include adjust-font-size;
 
 	color: #222;
 	background-color: white;
