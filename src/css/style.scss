@@ -1,3 +1,9 @@
+// formatting standard
+
+// @extend;
+// vanilla css;
+// @include;
+
 // fonts, set the base font size, line-height and font-family
 
 $base-font-size-px: 16;
@@ -18,10 +24,10 @@ $gutter-width-px: 20;
 // * mama-bear (tablet portrait)
 // * papa-bear (tablet landscape and above)
 
-$breakpoint-baby-bear-px: 300;
+$breakpoint-baby-bear-px: 400;
 $breakpoint-baby-bear: calculate-breakpoint($breakpoint-baby-bear-px);
 
-$breakpoint-mama-bear-px: 600;
+$breakpoint-mama-bear-px: 650;
 $breakpoint-mama-bear: calculate-breakpoint($breakpoint-mama-bear-px);
 
 $breakpoint-papa-bear-px: 940;
@@ -44,10 +50,10 @@ $breakpoint-papa-bear: calculate-breakpoint($breakpoint-papa-bear-px);
 @import "imports/Pilot/pilot";
 @import "imports/Chassis/chassis";
 
+@import "imports/normalize";
 @import "imports/base";
 @import "imports/layout";
 @import "imports/module";
-@import "imports/state";
 
 // clearfix, @extend if needed
 
