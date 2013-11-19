@@ -1,68 +1,76 @@
 html {
 	overflow-y: scroll;
-}
-
-body {
-	margin: 0;
 	font-family: $base-font-family;
-
-	@include adjust-font-size;
 
 	color: #222;
 	background-color: white;
+
+	@include adjust-font-size;
 }
 
 * {
-	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
-a {
-	text-decoration: none;
-
-	&:focus {
-		outline: thin dotted;
-	}
-}
-
 img {
-	border: 0;
 	max-width: 100%;
 	display: block;
 }
 
-h1, .alpha {
+h1,
+.alpha {
 
 }
 
-h2, .beta {
+h2,
+.beta {
 
 }
 
-h3, .gamma {
+h3,
+.gamma {
 
 }
 
-h4, .delta {
+h4,
+.delta {
 
 }
 
-h5, .epsilon {
+h5,
+.epsilon {
 
 }
 
-h6, .zeta {
+h6,
+.zeta {
 
 }
 
-h1, h2, h3, h4, h5, h6, p, ul, ol, table {
+address,
+blockquote,
+dl,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+p,
+pre,
+table,
+ul {
 	margin: 0;
 
 	@include leading;
 }
 
-ul, ol {
+ol,
+ul {
 
 	nav & {
 		list-style: none;
@@ -72,10 +80,5 @@ ul, ol {
 }
 
 table {
-	border-collapse: collapse;
 	width: 100%;
-}
-
-abbr {
-	border: 0;
 }
