@@ -18,7 +18,7 @@ module.exports = function(grunt) {
         options: {
           style: 'compressed'
         },
-        src: 'src/css/style.scss',
+        src: 'src/css/rocket.scss',
         dest: 'dist/css/style.css',
       }
     },
