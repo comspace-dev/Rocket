@@ -20,31 +20,47 @@ img {
 
 h1,
 .alpha {
+	$alpha-line-height-multiple: $alpha-line-height / $base-spacing-px;
 
+	@include adjust-font-size($alpha-font-size, $alpha-line-height-multiple);
 }
 
 h2,
 .beta {
+	$beta-line-height-multiple: $beta-line-height / $base-spacing-px;
 
+	@include adjust-font-size($beta-font-size, $beta-line-height-multiple);
 }
 
 h3,
 .gamma {
+	$gamma-line-height-multiple: $gamma-line-height / $base-spacing-px;
+
+	@include adjust-font-size($gamma-font-size, $gamma-line-height-multiple);
 
 }
 
 h4,
 .delta {
+	$delta-line-height-multiple: $delta-line-height / $base-spacing-px;
+
+	@include adjust-font-size($delta-font-size, $delta-line-height-multiple);
 
 }
 
 h5,
 .epsilon {
+	$epsilon-line-height-multiple: $epsilon-line-height / $base-spacing-px;
+
+	@include adjust-font-size($epsilon-font-size, $epsilon-line-height-multiple);
 
 }
 
 h6,
 .zeta {
+	$zeta-line-height-multiple: $zeta-line-height / $base-spacing-px;
+
+	@include adjust-font-size($zeta-font-size, $zeta-line-height-multiple);
 
 }
 
