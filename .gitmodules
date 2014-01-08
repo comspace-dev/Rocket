@@ -1,0 +1,9 @@
+[submodule "src/css/imports/Normalize"]
+	path = src/css/imports/Normalize
+	url = https://github.com/necolas/normalize.css.git
+[submodule "src/css/imports/Pilot"]
+	path = src/css/imports/Pilot
+	url = https://github.com/comspace-dev/Pilot.git
+[submodule "src/css/imports/Chassis"]
+	path = src/css/imports/Chassis
+	url = https://github.com/comspace-dev/Chassis.git
