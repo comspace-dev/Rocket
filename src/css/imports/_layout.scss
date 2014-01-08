@@ -1,17 +1,10 @@
-// page width, defines the maximum width of the page
+// clearfix, @extend if needed
 
-.page-width {
-	margin: 0 auto;
+%clearfix {
 
-	@include breakpoint(baby-bear) {
-		max-width: $breakpoint-baby-bear-px + px;
-	}
-
-	@include breakpoint(mama-bear) {
-		max-width: $breakpoint-mama-bear-px + px;
-	}
-
-	@include breakpoint(papa-bear) {
-		max-width: $breakpoint-papa-bear-px + px;
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
 	}
 }
