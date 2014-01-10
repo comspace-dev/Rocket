@@ -19,7 +19,7 @@ module.exports = function(grunt) {
           style: 'compressed'
         },
         src: 'src/css/rocket.scss',
-        dest: 'dist/css/style.css',
+        dest: 'dist/css/style.css'
       }
     },
 
@@ -34,8 +34,7 @@ module.exports = function(grunt) {
         stripBanners: false
       },
       script: {
-        src: ['src/js/script.js'
-        ],
+        src: 'src/js/script.js',
         dest: 'dist/js/script.js'
       }
     },
@@ -87,6 +86,10 @@ module.exports = function(grunt) {
         files: [
           {expand: true, cwd: 'src/', src: ['.htaccess', '**/*.php', '**/*.json', '**/*.txt'], dest: 'dist/'}
         ]
+      },
+      normalize: {
+        src: 'src/css/imports/Normalize/normalize.css',
+        dest: 'src/css/imports/_normalize.scss'
       }
     },
 
@@ -130,7 +133,7 @@ module.exports = function(grunt) {
       },
 
       html: {
-        files: ['src/**/*.html', ],
+        files: ['src/**/*.html'],
         tasks: ['bake'],
         options: {
           nospawn: true,
@@ -156,6 +159,6 @@ module.exports = function(grunt) {
   // Run server and watcher
   grunt.registerTask('default', ['connect', 'watch']);
   // Build everything
-  grunt.registerTask('build', ['clean', 'sass', 'jshint', 'concat', 'uglify', 'imagemin', 'copy', 'bake']);
+  grunt.registerTask('build', ['clean', 'jshint', 'concat', 'uglify', 'imagemin', 'copy', 'sass', 'bake']);
 
 };
