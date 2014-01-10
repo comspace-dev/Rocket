@@ -7,11 +7,11 @@
 @import "imports/breakpoints";
 
 // submodules
-// @import "imports/Pilot/pilot";
-// @import "imports/Chassis/chassis";
-// @import "imports/Normalize/normalize";
+@import "imports/Pilot/pilot";
+@import "imports/Chassis/chassis";
 
 // development files
+@import "imports/normalize";
 @import "imports/base";
 @import "imports/layout";
 @import "imports/module";
