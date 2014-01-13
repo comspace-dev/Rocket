@@ -1,8 +1,11 @@
 html {
 	overflow-y: scroll;
+}
+
+body {
 	font-family: $base-font-family;
 
-	color: #222;
+	color: $base-font-color;
 	background-color: white;
 
 	@include adjust-font-size;
@@ -37,7 +40,6 @@ h3,
 	$gamma-line-height-multiple: $gamma-line-height / $base-spacing-px;
 
 	@include adjust-font-size($gamma-font-size, $gamma-line-height-multiple);
-
 }
 
 h4,
@@ -45,7 +47,6 @@ h4,
 	$delta-line-height-multiple: $delta-line-height / $base-spacing-px;
 
 	@include adjust-font-size($delta-font-size, $delta-line-height-multiple);
-
 }
 
 h5,
@@ -53,7 +54,6 @@ h5,
 	$epsilon-line-height-multiple: $epsilon-line-height / $base-spacing-px;
 
 	@include adjust-font-size($epsilon-font-size, $epsilon-line-height-multiple);
-
 }
 
 h6,
@@ -61,7 +61,6 @@ h6,
 	$zeta-line-height-multiple: $zeta-line-height / $base-spacing-px;
 
 	@include adjust-font-size($zeta-font-size, $zeta-line-height-multiple);
-
 }
 
 address,
