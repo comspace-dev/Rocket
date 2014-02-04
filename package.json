@@ -4,22 +4,15 @@
   "private": true,
   "devDependencies": {
     "grunt": "~0.4.2",
-
-
     "grunt-contrib-clean": "*",
-
     "grunt-contrib-sass": "*",
     "grunt-autoprefixer": "*",
-
     "grunt-contrib-jshint": "*",
     "grunt-contrib-concat": "*",
     "grunt-contrib-uglify": "*",
-
     "grunt-contrib-imagemin": "*",
     "grunt-contrib-copy": "*",
-
     "grunt-bake": "*",
-
     "grunt-contrib-watch": "*",
     "grunt-contrib-connect": "*"
   }
