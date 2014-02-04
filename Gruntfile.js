@@ -242,7 +242,7 @@ module.exports = function(grunt) {
    * Build task builds everything once
   */
   grunt.registerTask('build', ['clean',
-                               'copy:normalize'
+                               'copy:normalize',
                                'sass',
                                'autoprefixer',
                                'bake',
