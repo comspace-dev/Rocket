@@ -11,8 +11,9 @@ body {
 	@include adjust-font-size;
 }
 
-* {
-	-moz-box-sizing: border-box;
+*,
+*:before,
+*:after {
 	box-sizing: border-box;
 }
 
