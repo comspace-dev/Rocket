@@ -1,17 +1,22 @@
-/* jshint node: true */
 module.exports = function(grunt) {
+
   "use strict";
 
-  // Project configuration.
   grunt.initConfig({
 
-    // Metadata.
     pkg: grunt.file.readJSON('package.json'),
 
-    // Task configuration.
+    /*
+     * Delete folders
+    */
+
     clean: {
       dist: ['dist']
     },
+
+    /*
+     * Compile Sass Files
+    */
 
     sass: {
       dist: {
@@ -23,21 +28,52 @@ module.exports = function(grunt) {
       }
     },
 
+    /*
+     * Parse CSS and add vendor prefixes to CSS rules using values from the ”Can I Use“ database.
+    */
+
+    autoprefixer: {
+      options: {
+        browsers: ['last 2 version', 'ie 8', 'ie 9']
+      },
+      dist: {
+        src: 'dist/css/style.css',
+        dest: 'dist/css/style.css'
+      }
+    },
+
+    /*
+     * Linting JavaScript files helps to detect errors and potential problems in your code.
+    */
+
     jshint: {
+      options: {
+        globals: {
+          'smarttabs': true
+        }
+      },
       src: {
         src: ['src/js/script.js']
       }
     },
+
+    /*
+     * Concatenate JavaScript files
+    */
 
     concat: {
       options: {
         stripBanners: false
       },
       script: {
-        src: 'src/js/script.js',
+        src: ['src/js/script.js'],
         dest: 'dist/js/script.js'
       }
     },
+
+    /*
+     * Minify JavaScript files
+    */
 
     uglify: {
       options: {
@@ -50,6 +86,10 @@ module.exports = function(grunt) {
       }
     },
 
+    /*
+     * Optimimze png and jpg images
+    */
+
     imagemin: {
       dist: {
         options: {
@@ -60,6 +100,10 @@ module.exports = function(grunt) {
         ]
       }
     },
+
+    /*
+     * Copy other files and folders
+    */
 
     copy: {
       images: {
@@ -84,7 +128,7 @@ module.exports = function(grunt) {
       },
       others: {
         files: [
-          {expand: true, cwd: 'src/', src: ['.htaccess', '**/*.php', '**/*.json', '**/*.txt'], dest: 'dist/'}
+          {expand: true, cwd: 'src/', src: ['**/*.php', '**/*.json', '**/*.txt'], dest: 'dist/'}
         ]
       },
       normalize: {
@@ -93,6 +137,10 @@ module.exports = function(grunt) {
       }
     },
 
+    /*
+     * Bake static pages for production while using modular files while in development.
+    */
+
     bake: {
       main: {
         files: [
@@ -100,6 +148,10 @@ module.exports = function(grunt) {
         ]
       },
     },
+
+    /*
+     * start a local connect server for testing
+    */
 
     connect: {
       server: {
@@ -111,12 +163,15 @@ module.exports = function(grunt) {
       }
     },
 
-    // Tasks being executed with 'grunt watch'
+    /*
+     * Watch files for changes and execute relevant tasks
+    */
+
     watch: {
 
       css: {
         files: ['src/**/*.scss'],
-        tasks: ['sass'],
+        tasks: ['sass', 'autoprefixer'],
         options: {
           nospawn: true,
           livereload: true
@@ -139,12 +194,32 @@ module.exports = function(grunt) {
           nospawn: true,
           livereload: true
         }
+      },
+
+      images: {
+        files: ['src/**/*.png', 'src/**/*.jpg'],
+        tasks: ['imagemin'],
+        options: {
+          nospawn: true,
+          livereload: true
+        }
+      },
+
+      copy: {
+        files: ['src/**/*.gif', 'src/**/*.svg', 'src/**/*.ico'],
+        tasks: ['copy:images'],
+        options: {
+          nospawn: true,
+          livereload: true
+        }
       }
 
     }
   });
 
-  // Load the plugins that provide the tasks we specified in package.json.
+  /*
+   * Load the plugins that provide the tasks we specified in package.json.
+  */
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
@@ -155,10 +230,24 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-bake');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
-  // Run server and watcher
+  /*
+   * Default task runs server and watcher
+  */
   grunt.registerTask('default', ['connect', 'watch']);
-  // Build everything
-  grunt.registerTask('build', ['clean', 'jshint', 'concat', 'uglify', 'imagemin', 'copy', 'sass', 'bake']);
 
+  /*
+   * Build task builds everything once
+  */
+  grunt.registerTask('build', ['clean',
+                               'sass',
+                               'autoprefixer',
+                               'bake',
+                               'jshint',
+                               'concat',
+                               'uglify',
+                               'imagemin',
+                               'copy'
+                              ]);
 };
