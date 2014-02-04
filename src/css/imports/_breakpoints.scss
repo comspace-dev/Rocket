@@ -1,4 +1,4 @@
-// breakpoints, define as much as you need and as little as possible
+// breakpoints, will be generated dynamically from breakpoint list
 
 @function calculate-breakpoint($px, $base: 16) {
 	@return $px / $base + em;
