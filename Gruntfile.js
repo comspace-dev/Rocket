@@ -126,11 +126,6 @@ module.exports = function(grunt) {
           {expand: true, cwd: 'src/', src: ['.htaccess'], dest: 'dist/'}
         ]
       },
-      others: {
-        files: [
-          {expand: true, cwd: 'src/', src: ['**/*.php', '**/*.json', '**/*.txt'], dest: 'dist/'}
-        ]
-      },
       normalize: {
         src: 'src/css/imports/Normalize/normalize.css',
         dest: 'src/css/imports/_normalize.scss'
