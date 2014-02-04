@@ -1,4 +1,9 @@
-// v3.1.0
+/*
+ * Rocket v3.1.0
+*/
+
+// normalize
+@import "imports/normalize";
 
 // defaults
 @import "imports/defaults";
@@ -11,7 +16,6 @@
 @import "imports/Chassis/chassis";
 
 // development files
-@import "imports/normalize";
 @import "imports/base";
 @import "imports/layout";
 @import "imports/module";
