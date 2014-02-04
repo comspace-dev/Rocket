@@ -1,33 +1,13 @@
 // breakpoints, define as much as you need and as little as possible
 
 @function calculate-breakpoint($px, $base: 16) {
-	@return $px / $base;
+	@return $px / $base + em;
 }
 
-// * baby-bear (phone landscape)
-// * mama-bear (tablet portrait)
-// * papa-bear (tablet landscape and above)
-
-$breakpoint-baby-bear-px: 400;
-$breakpoint-baby-bear: calculate-breakpoint($breakpoint-baby-bear-px);
-
-$breakpoint-mama-bear-px: 650;
-$breakpoint-mama-bear: calculate-breakpoint($breakpoint-mama-bear-px);
-
-$breakpoint-papa-bear-px: 940;
-$breakpoint-papa-bear: calculate-breakpoint($breakpoint-papa-bear-px);
-
 @mixin breakpoint($width) {
-
-	@if $width == baby-bear {
-		@media only screen and (min-width: $breakpoint-baby-bear + em) { @content; }
-	}
-
-	@else if $width == mama-bear {
-		@media only screen and (min-width: $breakpoint-mama-bear + em) { @content; }
-	}
-
-	@else if $width == papa-bear {
-		@media only screen and (min-width: $breakpoint-papa-bear + em) { @content; }
+	@each $breakpoint in $breakpoints {
+		@if $width == nth($breakpoint, 1) {
+			@media only screen and (min-width: calculate-breakpoint(nth($breakpoint, 2))) { @content; }
+		}
 	}
 }

@@ -29,3 +29,13 @@ $zeta-line-height: 36;
 
 $gutter-width-px: 20;
 $use-clearfix: false;
+
+// breakpoints
+
+/*
+ * baby-bear (phone landscape)
+ * mama-bear (tablet portrait)
+ * papa-bear (tablet landscape and above)
+*/
+
+$breakpoints: baby-bear 400, mama-bear 650, papa-bear 940;
