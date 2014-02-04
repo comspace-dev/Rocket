@@ -19,6 +19,9 @@ module.exports = function(grunt) {
     */
 
     sass: {
+      options: {
+        precision: 7
+      },
       dist: {
         options: {
           style: 'compressed'
