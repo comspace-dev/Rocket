@@ -4,10 +4,16 @@
 	@return $px / $base + em;
 }
 
-@mixin breakpoint($width) {
+@mixin breakpoint($width, $max: false) {
 	@each $breakpoint in $breakpoints {
-		@if $width == nth($breakpoint, 1) {
-			@media only screen and (min-width: calculate-breakpoint(nth($breakpoint, 2))) { @content; }
+		@if $max {
+			@if $width == nth($breakpoint, 1) {
+				@media only screen and (max-width: calculate-breakpoint(nth($breakpoint, 2) - 1)) { @content; }
+			}
+		} @else {
+			@if $width == nth($breakpoint, 1) {
+				@media print, only screen and (min-width: calculate-breakpoint(nth($breakpoint, 2))) { @content; }
+			}
 		}
 	}
 }
