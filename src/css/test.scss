@@ -1,0 +1,286 @@
+@import "rocket.scss";
+
+/**
+ * border-radius
+*/
+
+.border-radius-1 {
+	@include border-radius(10);
+}
+
+.border-radius-2 {
+	@include border-radius(10, 10);
+}
+
+.border-radius-3 {
+	@include border-radius(10, 10, 10);
+}
+
+.border-radius {
+	@include border-radius(10, 10, 10, 10);
+}
+
+.border-top-right-radius {
+	@include border-top-right-radius(10)
+}
+
+.border-bottom-right-radius {
+	@include border-bottom-right-radius(10)
+}
+
+.border-top-left-radius {
+	@include border-top-left-radius(10)
+}
+
+.border-bottom-left-radius {
+	@include border-bottom-left-radius(10)
+}
+
+/**
+ * border
+*/
+
+.border {
+	@include border(10);
+}
+
+.border-top {
+	@include border-top(10);
+}
+
+.border-right {
+	@include border-right(10);
+}
+
+.border-bottom {
+	@include border-bottom(10);
+}
+
+.border-left {
+	@include border-left(10);
+}
+
+.border-spacing-1 {
+	@include border-spacing(10);
+}
+
+.border-spacing {
+	@include border-spacing(10, 10);
+}
+
+/**
+ * box-shadow
+*/
+
+.box-shadow-1 {
+	@include box-shadow(10);
+}
+
+.box-shadow-2 {
+	@include box-shadow(10, 10);
+}
+
+.box-shadow-3 {
+	@include box-shadow(10, 10, 10);
+}
+
+.box-shadow {
+	@include box-shadow(10, 10, 10, 10);
+}
+
+.box-shadow-inset {
+	@include box-shadow(10, 10, 10, 10, true);
+}
+
+
+/**
+ * height
+*/
+
+.height {
+	@include height(10);
+}
+
+.min-height {
+	@include min-height(10);
+}
+
+.max-height {
+	@include max-height(10);
+}
+
+/**
+ * leading
+*/
+
+.leading {
+	@include leading;
+}
+
+.leading--half {
+	@include leading--half;
+}
+
+.leading--quarter {
+	@include leading--quarter;
+}
+
+.leading--double {
+	@include leading(2);
+}
+
+/**
+ * margin
+*/
+
+.margin-1 {
+	@include margin(10);
+}
+
+.margin-2 {
+	@include margin(10, 10);
+}
+
+.margin-3 {
+	@include margin(10, 10, 10);
+}
+
+.margin {
+	@include margin(10, 10, 10, 10);
+}
+
+.margin-top {
+	@include margin-top(10);
+}
+
+.margin-right {
+	@include margin-right(10);
+}
+
+.margin-bottom {
+	@include margin-bottom(10);
+}
+
+.margin-left {
+	@include margin-left(10);
+}
+
+/**
+ * padding
+*/
+
+.padding-1 {
+	@include padding(10);
+}
+
+.padding-2 {
+	@include padding(10, 10);
+}
+
+.padding-3 {
+	@include padding(10, 10, 10);
+}
+
+.padding {
+	@include padding(10, 10, 10, 10);
+}
+
+.padding-top {
+	@include padding-top(10);
+}
+
+.padding-right {
+	@include padding-right(10);
+}
+
+.padding-bottom {
+	@include padding-bottom(10);
+}
+
+.padding-left {
+	@include padding-left(10);
+}
+
+/**
+ * position
+*/
+
+.top {
+	@include top(10);
+}
+
+.right {
+	@include right(10);
+}
+
+.bottom {
+	@include bottom(10);
+}
+
+.left {
+	@include left(10);
+}
+
+/**
+ * text-shadow
+*/
+
+.text-shadow-1 {
+	@include text-shadow(10);
+}
+
+.text-shadow-2 {
+	@include text-shadow(10, 10);
+}
+
+.text-shadow {
+	@include text-shadow(10, 10, 10);
+}
+
+/**
+ * typography
+*/
+
+.adjust-font-size {
+  @include adjust-font-size;
+}
+
+.adjust-font-size-10 {
+  @include adjust-font-size(10);
+}
+
+.adjust-font-size-10-2 {
+  @include adjust-font-size(10, 2);
+}
+
+.font-size {
+  @include font-size(10);
+}
+
+.line-height {
+  @include line-height(10);
+}
+
+.letter-spacing {
+  @include letter-spacing(10);
+}
+
+.text-indent {
+  @include text-indent(10);
+}
+
+/**
+ * width
+*/
+
+.width {
+  @include width(10);
+}
+
+.min-width {
+  @include min-width(10);
+}
+
+.max-width {
+  @include max-width(10);
+}

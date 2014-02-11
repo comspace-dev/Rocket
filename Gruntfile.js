@@ -28,6 +28,13 @@ module.exports = function(grunt) {
         },
         src: 'src/css/rocket.scss',
         dest: 'dist/css/style.css'
+      },
+      test: {
+        options: {
+          style: 'expanded'
+        },
+        src: 'src/css/test.scss',
+        dest: 'dist/css/test.css'
       }
     },
 
