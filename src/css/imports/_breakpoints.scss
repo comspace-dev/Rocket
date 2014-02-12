@@ -1,7 +1,7 @@
 // breakpoints, will be generated dynamically from breakpoint list
 
-@function calculate-breakpoint($px, $base: $root-font-size-px) {
-	@return $px / $base + em;
+@function calculate-breakpoint($px) {
+	@return $px / 16 + em;
 }
 
 @mixin breakpoint($width, $max: false) {
