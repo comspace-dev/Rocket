@@ -20,19 +20,14 @@ module.exports = function(grunt) {
 
     sass: {
       options: {
-        precision: 7
+        precision: 7,
+         style: 'expanded'
       },
       dist: {
-        options: {
-          style: 'compressed'
-        },
         src: 'src/css/rocket.scss',
         dest: 'dist/css/style.css'
       },
       test: {
-        options: {
-          style: 'expanded'
-        },
         src: 'src/css/test.scss',
         dest: 'dist/css/test.css'
       }
@@ -46,6 +41,28 @@ module.exports = function(grunt) {
       options: {
         browsers: ['last 2 version', 'ie 8', 'ie 9']
       },
+      dist: {
+        src: 'dist/css/style.css',
+        dest: 'dist/css/style.css'
+      }
+    },
+
+    /*
+     * Combine matching media queries into one media query definition.
+    */
+
+    cmq: {
+      dist: {
+        src: 'dist/css/style.css',
+        dest: 'dist/css/style.css'
+      }
+    },
+
+    /*
+     * Compress CSS files.
+    */
+
+    cssmin: {
       dist: {
         src: 'dist/css/style.css',
         dest: 'dist/css/style.css'
@@ -176,7 +193,7 @@ module.exports = function(grunt) {
 
       css: {
         files: ['src/**/*.scss'],
-        tasks: ['sass', 'autoprefixer'],
+        tasks: ['sass', 'autoprefixer', 'cmq', 'cssmin'],
         options: {
           nospawn: true,
           livereload: true
@@ -230,6 +247,8 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-combine-media-queries');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-concat');
@@ -255,6 +274,8 @@ module.exports = function(grunt) {
                                'copy:normalize',
                                'sass',
                                'autoprefixer',
+                               'cmq',
+                               'cssmin',
                                'bake',
                                'jshint',
                                'concat',
